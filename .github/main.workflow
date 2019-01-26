@@ -9,19 +9,17 @@ action "Docker Lint" {
 }
 
 action "Build" {
-  needs = ["Docker Lint"]
   uses = "actions/docker/cli@master"
   args = "build -t gh-pages ."
 }
 
 action "Docker Tag" {
-  needs = ["Build"]
+  needs = ["Build", "Docker Lint"]
   uses = "actions/docker/tag@master"
   args = "gh-pages mythmon/gh-pages --no-latest"
 }
 
 action "Publish Filter" {
-  needs = ["Build"]
   uses = "actions/bin/filter@master"
   args = "branch master"
 }
