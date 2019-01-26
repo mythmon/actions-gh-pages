@@ -35,5 +35,5 @@ action "Docker Login" {
 action "Docker Publish" {
   needs = ["Docker Tag", "Docker Login"]
   uses = "actions/docker/cli@master"
-  args = "push mythmon/yarn"
+  args = "push mythmon/gh-pages"
 }
