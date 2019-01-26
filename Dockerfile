@@ -11,8 +11,8 @@ LABEL com.github.actions.icon="upload-cloud"
 LABEL com.github.actions.color="#327fc7"
 COPY LICENSE README.md /
 
-RUN apt-get update && 
-    apt-get install -y git && \
+RUN apt-get update && \
+    apt-get install --yes --no-install-recommends git && \
     rm -rf /var/lib/apt/lists/*
 COPY "entrypoint.js" "/entrypoint.js"
 
