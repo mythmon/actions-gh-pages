@@ -27,13 +27,13 @@ action "Build" {
 action "Publish" {
   needs = ["Build"]
   uses = "mythmon/actions-gh-pages@master"
-  secrets = ["GITHUB_PERSONAL_ACCESS_TOKEN"]
+  secrets = ["PERSONAL_ACCESS_TOKEN"]
 }
 ```
 
 ### Secrets
 
-* `GITHUB_PERSONAL_ACCESS_TOKEN` - A [Personal Access
+* `PERSONAL_ACCESS_TOKEN` - A [Personal Access
   Token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/).
   Must **not** be the token provided by the workflow editor.
 

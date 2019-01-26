@@ -3,7 +3,7 @@
 const ghpages = require("gh-pages");
 
 const {
-  GITHUB_PERSONAL_ACCESS_TOKEN: token,
+  PERSONAL_ACCESS_TOKEN: token,
   SOURCE_DIRECTORY: sourceDir = "build",
   GIT_USER: gitUser = "Automated Github Action",
   GIT_EMAIL: gitEmail = "<>",
@@ -12,7 +12,7 @@ const {
 } = process.env;
 
 if (!token) {
-  console.error("Error: Environment variable GITHUB_PERSONAL_ACCESS_TOKEN must be provided.")
+  console.error("Error: Environment variable PERSONAL_ACCESS_TOKEN must be provided.")
   process.exit(1);
 }
 

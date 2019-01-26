@@ -8,7 +8,7 @@ LABEL maintainer="Michael Cooper <mythmon@gmail.com>"
 LABEL com.github.actions.name="GitHub Action for gh-pages"
 LABEL com.github.actions.description="Uses gh-pages to deploy a static site to Github Pages."
 LABEL com.github.actions.icon="upload-cloud"
-LABEL com.github.actions.color="#327fc7"
+LABEL com.github.actions.color="blue"
 COPY LICENSE README.md /
 
 RUN apt-get update && \
